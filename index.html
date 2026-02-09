@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema de Ponto</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Sistema de Ponto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>RH System</h1>
+  <p>Aplicação online via Netlify + Firebase</p>
+
+  <div id="login">
+    <input type="email" id="email" placeholder="E-mail" />
+    <input type="password" id="password" placeholder="Senha" />
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="painel" style="display:none;">
+    <h2>Painel do Usuário</h2>
+    <button onclick="registrarPonto()">Registrar Ponto</button>
+    <button onclick="logout()">Sair</button>
+    <ul id="listaPontos"></ul>
+  </div>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
 </html>
